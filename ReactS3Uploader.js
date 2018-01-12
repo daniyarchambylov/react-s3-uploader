@@ -32,6 +32,7 @@ var ReactS3Uploader = createReactClass({
         scrubFilename: PropTypes.func,
         s3path: PropTypes.string,
         inputRef: PropTypes.func,
+        files: PropTypes.array,
         autoUpload: PropTypes.bool
     },
 
@@ -77,6 +78,7 @@ var ReactS3Uploader = createReactClass({
             contentDisposition: this.props.contentDisposition,
             server: this.props.server,
             scrubFilename: this.props.scrubFilename,
+            filesToUpload: this.props.files,
             s3path: this.props.s3path
         });
     },
